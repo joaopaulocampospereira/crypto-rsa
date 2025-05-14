@@ -10,7 +10,7 @@ import modInverse from "@/utils/modInverse";
 import modPow from "@/utils/modPow";
 
 
-export default function Home() {
+export default function Cripto() {
   var p = randomPrime();
   var q = randomPrime();
 
@@ -24,7 +24,7 @@ export default function Home() {
 
   const d = modInverse(e, phi);
 
-  var msg = "RSA";
+  var msg = "Ola RSA!";
   const toCript = [...msg].map(c => c.charCodeAt(0));
 
   const rsaMsg = toCript.map(m =>
@@ -34,8 +34,16 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Link href="/cripto">Criptografar</Link>
-        <Link href="/descripto">Descriptografar</Link>
+      <h1>P = {p}</h1>
+        <h1>Q = {q}</h1>
+        <p>---------</p>
+        <h3>Chave Pública: {e}, {n}</h3>
+        <h3>Chave Privada: {d}, {n}</h3>
+        <p>---------</p>
+        <h3>Original: {msg}</h3>
+        <h3>Criptografada: {JSON.stringify(rsaMsg)}</h3>
+
+        <Link href="/">Voltar</Link>
       </main>
     </div>
   );
