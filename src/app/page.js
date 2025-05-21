@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import randomPrime from "@/utils/randomPrime";
 import isPrime from "@/utils/isPrime";
-import gcd from "@/utils/gdc";
+import gcd from "@/utils/gcd";
 import modInverse from "@/utils/modInverse";
 import modPow from "@/utils/modPow";
 

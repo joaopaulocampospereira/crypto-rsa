@@ -16,6 +16,31 @@
   font-family: var(--font-geist-sans);
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemtitle {
+  margin-right: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 3px;
+  margin: 3px;
+  width: 100%;
+}
+
+.formBtn {
+  padding: 3px;
+  margin: 3px;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
